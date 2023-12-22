@@ -1,3 +1,27 @@
 {
-  "extends": ["eslint:recommended", "next"]
+  "extends": ["eslint:recommended", "next", "plugin:prettier/recommended"],
+  "rules": {
+    "eqeqeq": "error",
+    "no-console": "warn",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "singleQuote": true
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "dist",
+    "public"
+  ]
 }
