@@ -2,22 +2,35 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Search from '../Search';
+import { StyledNavBar, StyledBurger } from './header.styles';
+import { useRef, useState } from 'react';
+
 export default function Header() {
+  const [open, setOpen] = useState(false);
+  const node = useRef();
   return (
     <header>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/characters">Conoce a</Link>
-          </li>
-          <li>
-            <Link href="/doctors">Doctores</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contacto</Link>
-          </li>
-        </ul>
-      </nav>
+      <div ref={node}>
+        <StyledNavBar open={open}>
+          <ul>
+            <li>
+              <Link href="/characters">Conoce a</Link>
+            </li>
+            <li>
+              <Link href="/doctors">Doctores</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contacto</Link>
+            </li>
+          </ul>
+        </StyledNavBar>
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
+      </div>
+
       <picture>
         <Image
           src="/assets/img/logos/logo.png"
