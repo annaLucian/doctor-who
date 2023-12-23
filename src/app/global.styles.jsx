@@ -11,13 +11,16 @@ const GlobalStyle = createGlobalStyle`
     --fw-semibold: 600;
     --fw-regular: 400;
 }
-body {
+*{
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    border: 0;
+}
+body {
     background-color: var(--color-primary);
     font-size: 10px;
-    font-family: var(--ff-montserrat);
+    /* font-family: var(--ff-montserrat); */
 }
 
 `;

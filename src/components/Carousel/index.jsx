@@ -1,7 +1,25 @@
 'use client';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {
+  StyledCarouselItem,
+  StyledButton,
+  SliderContainer,
+} from './carousel.styles';
 import Slider from 'react-slick';
+
+const CAROUSEL_PROPS = [
+  { title: 'The Giggle', imgUrl: '/assets/img/carrusel/carrusel-2.jpg' },
+  { title: 'Allons-y!', imgUrl: '/assets/img/carrusel/carrusel-1.jpg' },
+  {
+    title: 'Wild Blue Yonder',
+    imgUrl: '/assets/img/carrusel/carrusel-4.jpg',
+  },
+  {
+    title: 'Meet the new Doctor...',
+    imgUrl: '/assets/img/carrusel/carrusel-3.jpg',
+  },
+];
 
 export default function Carousel() {
   const settings = {
@@ -16,28 +34,21 @@ export default function Carousel() {
     adaptiveHeight: true,
   };
   return (
-    <div>
-      <h2> Single Item</h2>
+    <SliderContainer className="slider-container">
       <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
+        {CAROUSEL_PROPS.map((props) => {
+          return (
+            <div key={props.title}>
+              <StyledCarouselItem $imgUrl={props.imgUrl}>
+                <h3 className="carouselItem__title">{props.title}</h3>
+                <StyledButton className="carouselItem__btn">
+                  Ver ahora
+                </StyledButton>
+              </StyledCarouselItem>
+            </div>
+          );
+        })}
       </Slider>
-    </div>
+    </SliderContainer>
   );
 }
