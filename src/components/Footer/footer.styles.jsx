@@ -9,6 +9,10 @@ export const StyledFooter = styled.footer`
     display: flex;
     gap: 1.2rem;
   }
+  .social-links li {
+    list-style: none;
+  }
+
   @media (min-width: 1000px) {
     padding: 1rem 6rem;
     .social-links li svg path {
