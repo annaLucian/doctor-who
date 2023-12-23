@@ -5,9 +5,7 @@ const GlobalStyle = createGlobalStyle`
     --color-primary: #040521;
     --color-secundary:#FFC67E;
     --color-tertiary: #FFFFFF;
-    --ff-lato:'Lato', sans-serif;
-    --ff-montserrat: 'Montserrat', sans-serif;
-    --fw-bold:700;
+    --fw-bold:800;
     --fw-semibold: 600;
     --fw-regular: 400;
 }
@@ -16,11 +14,12 @@ const GlobalStyle = createGlobalStyle`
     padding:0;
     box-sizing: border-box;
     border: 0;
+    font-family: var(--font-lato);
 }
 body {
     background-color: var(--color-primary);
     font-size: 10px;
-    /* font-family: var(--ff-montserrat); */
+    font-family: var(--font-monserrat);
 }
 
 `;

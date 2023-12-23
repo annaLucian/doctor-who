@@ -123,5 +123,6 @@ export const StyledButton = styled.button`
   }
   @media (min-width: 1200px) {
     width: 15%;
+    font-size: 1.5rem;
   }
 `;
