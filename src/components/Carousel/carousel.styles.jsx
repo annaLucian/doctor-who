@@ -5,7 +5,7 @@ export const SliderContainer = styled.div`
   .slick-dots {
     bottom: 1rem;
     list-style: none;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     text-align: end;
   }
   & li {
@@ -94,10 +94,9 @@ export const StyledButton = styled.button`
   transition: all 0.3s ease-out;
   border: 0;
   background: #ffc67e;
-  color: #000;
-  padding: 0.5rem 1.7rem;
+  padding: 0.8rem 1.7rem;
   width: 45%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 6rem;
   cursor: pointer;
   font-weight: var(--fw-bold);
@@ -118,11 +117,19 @@ export const StyledButton = styled.button`
   &:hover:after {
     width: 100%;
   }
+  .btnLink {
+    color: #000;
+    text-decoration: none;
+  }
   @media (min-width: 800px) {
     width: 25%;
   }
   @media (min-width: 1200px) {
+    width: 20%;
+    font-size: 1.7rem;
+  }
+  @media (min-width: 1600px) {
     width: 15%;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 `;
