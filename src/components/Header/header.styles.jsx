@@ -5,9 +5,10 @@ export const StyledHeader = styled.header`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   & .header__logoIcon--mobile {
-    padding: 2rem 2rem 0.8rem;
+    padding: 1rem 2rem 0.8rem;
     display: flex;
     width: 100%;
     align-items: center;
@@ -17,6 +18,7 @@ export const StyledHeader = styled.header`
     margin-bottom: 9rem;
   }
   @media (min-width: 1000px) {
+    position: unset;
     padding-top: 1rem;
     .header__SearchLinks {
       display: flex;
@@ -45,8 +47,10 @@ export const StyledNavBar = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  top: 8rem;
+  z-index: 10;
   background: var(--color-primary);
-  height: ${({ open }) => (open ? '70%' : '0')};
   padding: 2rem;
   width: 100%;
   opacity: ${({ open }) => (open ? '1' : '0')};
@@ -75,6 +79,7 @@ export const StyledNavBar = styled.nav`
     height: auto;
     opacity: 1;
     padding: 2rem;
+    top: 0;
     flex-direction: row;
     justify-content: space-between;
     position: relative;
@@ -94,6 +99,11 @@ export const StyledNavBar = styled.nav`
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+      top: 0.05rem;
+    }
+    & .header__logoIcon--desktop picture img {
+      width: 8rem;
+      height: 8rem;
     }
   }
   @media (min-width: 1200px) {

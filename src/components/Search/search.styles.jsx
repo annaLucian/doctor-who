@@ -63,6 +63,6 @@ export const FormSearch = styled.form`
     width: 20rem;
   }
   @media (min-width: 1600px) {
-    width: 2rem;
+    width: 25rem;
   }
 `;

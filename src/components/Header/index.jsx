@@ -10,14 +10,17 @@ export default function Header() {
   return (
     <StyledHeader>
       <div className="header__logoIcon--mobile">
-        <picture>
-          <Image
-            src="/assets/img/logos/logo.png"
-            width={100}
-            height={100}
-            alt="logo of the serie"
-          />
-        </picture>
+        <Link href="/">
+          <picture>
+            <Image
+              src="/assets/img/logos/logo.png"
+              width={100}
+              height={100}
+              alt="logo of the serie"
+            />
+          </picture>
+        </Link>
+
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />
@@ -37,14 +40,16 @@ export default function Header() {
           </li>
         </ul>
         <div className="header__logoIcon--desktop">
-          <picture>
-            <Image
-              src="/assets/img/logos/logo.png"
-              width={100}
-              height={100}
-              alt="logo of the serie"
-            />
-          </picture>
+          <Link href="/">
+            <picture>
+              <Image
+                src="/assets/img/logos/logo.png"
+                width={100}
+                height={100}
+                alt="logo of the serie"
+              />
+            </picture>
+          </Link>
           <StyledBurger open={open} onClick={() => setOpen(!open)}>
             <div />
             <div />
