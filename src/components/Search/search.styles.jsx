@@ -39,4 +39,7 @@ export const FormSearch = styled.form`
     width: 2.5rem;
     height: 2.5rem;
   }
+  a:hover .searchIcon path {
+    fill: black;
+  }
 `;

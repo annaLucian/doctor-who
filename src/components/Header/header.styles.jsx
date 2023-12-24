@@ -6,7 +6,7 @@ export const StyledNavBar = styled.nav`
   justify-content: center;
   background: #effffa;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
-  height: 100vh;
+  height: 100%;
   text-align: left;
   padding: 2rem;
   position: absolute;

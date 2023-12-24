@@ -42,7 +42,13 @@ export default function Carousel() {
               <StyledCarouselItem $imgUrl={props.imgUrl}>
                 <h3 className="carouselItem__title">{props.title}</h3>
                 <StyledButton className="carouselItem__btn">
-                  Ver ahora
+                  <a
+                    href="https://www.doctorwho.tv/"
+                    target="_blank"
+                    className="btnLink"
+                  >
+                    Ver ahora
+                  </a>
                 </StyledButton>
               </StyledCarouselItem>
             </div>
