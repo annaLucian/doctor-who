@@ -2,7 +2,7 @@
 import StyledComponentsRegistry from './registry';
 import GlobalStyle from './global.styles';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+// import Footer from '@/components/Footer';
 import { Lato, Montserrat } from 'next/font/google';
 
 const lato = Lato({
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <GlobalStyle />
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </StyledComponentsRegistry>
       </body>
     </html>
