@@ -1,10 +1,10 @@
 'use client';
-
-// export const metadata = {
-//   title: 'Contact',
-//   description: 'This page shows a contact form.',
-// };
-
+import ContactImage from '@/components/ContactImage';
+import { metadata } from '@/components/ContactImage';
 export default function Contact() {
-  return <h1>Contact</h1>;
+  return (
+    <section>
+      <ContactImage />
+    </section>
+  );
 }
