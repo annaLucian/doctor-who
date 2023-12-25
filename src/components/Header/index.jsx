@@ -1,11 +1,17 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import Search from '../Search';
-import SocialLinks from '../SocialLinks';
-import { StyledHeader, StyledNavBar, StyledBurger } from './header.styles';
+import Search from '@/components/Search';
+import SocialLinks from '@/components/SocialLinks';
+import {
+  StyledHeader,
+  StyledNavBar,
+  StyledBurger,
+} from '@/components/Header/header.styles';
 import { useState } from 'react';
 
 export default function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
     <StyledHeader>
@@ -30,13 +36,28 @@ export default function Header() {
       <StyledNavBar open={open}>
         <ul className="header__links">
           <li>
-            <Link href="/characters">Conoce a</Link>
+            <Link
+              href="/characters"
+              className={`${pathname === '/characters' ? 'active' : ''}`}
+            >
+              Conoce a
+            </Link>
           </li>
           <li>
-            <Link href="/doctors">Doctores</Link>
+            <Link
+              href="/doctors"
+              className={`${pathname === '/doctors' ? 'active' : ''}`}
+            >
+              Doctores
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contacto</Link>
+            <Link
+              href="/contact"
+              className={`${pathname === '/contact' ? 'active' : ''}`}
+            >
+              Contacto
+            </Link>
           </li>
         </ul>
         <div className="header__logoIcon--desktop">
