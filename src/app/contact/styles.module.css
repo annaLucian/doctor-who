@@ -1,0 +1,17 @@
+.contactPage {}
+
+.titleContact {
+    color: white;
+    padding: 2.5rem 2rem;
+    font-weight: var(--fw-bold);
+    font-size: 2.5rem;
+}
+
+.contactFormImage {
+    position: relative;
+}
+
+/* .contactPage {
+    padding: 4rem 8rem 3rem;
+
+} */

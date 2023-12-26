@@ -2,45 +2,41 @@ import styled from 'styled-components';
 
 export const StyledContactImage = styled.div`
   position: relative;
+  overflow: hidden;
   height: 50rem;
+  width: 100%;
   & img {
     position: absolute;
-    animation: speed 4s ease-in-out;
   }
-
   .symbolPersistence {
-    animation-delay: 3s;
-    left: 20%;
+    opacity: 0;
+    top: 2%;
+    animation: on-load 2.5s infinite ease-in-out forwards;
   }
   .symbolResistance {
-    animation-delay: 2s;
-    left: 36%;
-    top: 8%;
+    left: 50%;
+    top: 15%;
+    opacity: 0;
+    animation: on-load 3s infinite ease-in-out 0.8s;
   }
   .symbolVencer {
-    animation-delay: 1s;
-    left: 15%;
-    top: 34%;
+    top: 30%;
+    opacity: 0;
+    animation: on-load 6s infinite ease-in-out 1.5s;
   }
-  @keyframes speed {
+
+  @keyframes on-load {
     0% {
-      transform: translate(0%);
-      border-radius: 50%;
+      opacity: 0.5;
+      transform: scale(1);
     }
-
-    25% {
-      transform: translate(150%) scale(0.5);
-      border-radius: 0%;
+    70% {
+      opacity: 1;
+      transform: scale(1.1);
     }
-
-    50% {
-      transform: translate(150%, 150%);
-      border-radius: 50%;
-    }
-
-    75% {
-      transform: translate(0, 150%) scale(0.5);
-      border-radius: 0%;
+    100% {
+      opacity: 0.7;
+      transform: scale(1);
     }
   }
 `;
