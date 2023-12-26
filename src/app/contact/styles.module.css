@@ -1,6 +1,4 @@
-.contactPage {}
-
-.titleContact {
+.titleContact__mobile {
     color: white;
     padding: 2.5rem 2rem;
     font-weight: var(--fw-bold);
@@ -11,7 +9,28 @@
     position: relative;
 }
 
-/* .contactPage {
-    padding: 4rem 8rem 3rem;
+@media (min-width: 1000px) {
+    .titleContact__mobile {
+        padding: 5rem 6rem 0;
+    }
+}
 
-} */
+@media (min-width: 1200px) {
+    .contactFormImage {
+        display: flex;
+        gap: 3rem;
+        padding: 2rem 6rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .titleContact__mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 1600px) {
+    .contactFormImage {
+        padding: 2rem 8rem;
+    }
+}

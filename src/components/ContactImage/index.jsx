@@ -9,6 +9,7 @@ export const metadata = {
 export default function ContactImage() {
   return (
     <StyledContactImage>
+      <h1 className="titleContact__desktop">Envia tu mensaje al Doctor</h1>
       <Image
         src="/assets/img/svg/persistencia.svg"
         width={200}

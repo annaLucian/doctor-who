@@ -6,7 +6,9 @@ import { metadata } from '@/components/ContactImage';
 export default function Contact() {
   return (
     <section className={styles.contactPage}>
-      <h1 className={styles.titleContact}>Envia tu mensaje al Doctor</h1>
+      <h1 className={styles.titleContact__mobile}>
+        Envia tu mensaje al Doctor
+      </h1>
       <div className={styles.contactFormImage}>
         <ContactImage />
         <Form />
