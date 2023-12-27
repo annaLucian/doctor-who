@@ -38,7 +38,9 @@ export const StyledForm = styled.form`
     position: relative;
     clear: both;
   }
-
+  .red {
+    border: 1px solid red;
+  }
   span {
     width: 100%;
     height: 3rem;
