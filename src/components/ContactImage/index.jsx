@@ -17,21 +17,21 @@ export default function ContactImage() {
         src="/assets/img/svg/persistencia.svg"
         width={200}
         height={200}
-        alt="symbol of the series persistence"
+        alt="simbolo de la serie persistencia"
         className="symbolPersistence"
       />
       <Image
         src="/assets/img/svg/resistencia.png"
         width={260}
         height={260}
-        alt="symbol of the series resistance"
+        alt="simbolo de la serie resistencia"
         className="symbolResistance"
       />
       <Image
         src="/assets/img/svg/vencer.svg"
         width={220}
         height={220}
-        alt="symbol of the series victory"
+        alt="simbolo de la serie vencer"
         className="symbolVencer"
       />
     </StyledContactImage>
