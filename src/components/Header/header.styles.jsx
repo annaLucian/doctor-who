@@ -54,7 +54,7 @@ export const StyledNavBar = styled.nav`
   align-items: center;
   position: absolute;
   top: 8rem;
-  z-index: 10;
+  z-index: ${({ open }) => (open ? '9' : '-1')};
   background: var(--color-primary);
   padding: 2rem;
   width: 100%;
@@ -88,6 +88,7 @@ export const StyledNavBar = styled.nav`
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    z-index: 9;
     & .header__links {
       display: flex;
       gap: 2.5rem;

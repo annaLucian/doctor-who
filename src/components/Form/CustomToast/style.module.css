@@ -1,0 +1,40 @@
+.toasterContact {
+    z-index: 10 !important;
+    font-size: 1.1rem;
+}
+
+.toasterContact>div>div:first-child {
+    padding: 10px 13px;
+    background-color: #034dc6;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: rgb(64 46 240 / 40%) 0px 5px, rgb(137 46 240 / 30%) 0px 10px, rgb(47 46 240 / 20%) 0px 15px, rgb(46 183 240 / 10%) 0px 20px, rgb(46 199 240 / 5%) 0px 25px;
+}
+
+@media(min-width:1000px) {
+    .toasterContact {
+        bottom: 80px;
+    }
+}
+
+@media(min-width:1200px) {
+    .toasterContact>div {
+        right: 9rem !important;
+        bottom: 1rem !important;
+        left: unset !important;
+    }
+}
+
+@media(min-width:1400px) {
+    .toasterContact>div {
+        right: 17rem !important;
+        bottom: 0 !important;
+    }
+}
+
+@media(min-width:1600px) {
+    .toasterContact>div {
+        right: 27rem !important;
+        bottom: 4rem !important;
+    }
+}
