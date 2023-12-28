@@ -19,7 +19,7 @@ export const StyledHeader = styled.header`
   }
   .active {
     color: #ffc67e;
-    box-shadow: inset 0 -3px 0 #ffc67e;
+    border-bottom: 1px solid #ffc67e;
     padding-bottom: 0.8rem;
   }
   @media (min-width: 1000px) {
