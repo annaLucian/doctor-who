@@ -12,5 +12,21 @@
 @media(min-width:500px) {
     .cards__container {
         display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(min-width:1200px) {
+    .doctors__section {
+        padding: 4rem 6rem;
+    }
+}
+
+@media(min-width:1600px) {
+    .doctors__section {
+        padding: 4rem 8rem;
     }
 }
