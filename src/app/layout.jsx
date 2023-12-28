@@ -21,7 +21,13 @@ const montserrat = Montserrat({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${lato.variable} ${montserrat.variable}`}>
-      <head></head>
+      <head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/img/logos/logo.png"
+        ></link>
+      </head>
       <body>
         <StyledComponentsRegistry>
           <GlobalStyle />
