@@ -3,12 +3,15 @@ import styled from 'styled-components';
 export const StyledContactImage = styled.div`
   position: relative;
   overflow: hidden;
-  height: 35rem;
+  height: 40rem;
   width: 100%;
   & img {
     position: absolute;
   }
   .titleContact__desktop {
+    display: none;
+  }
+  .textoRequired--blue {
     display: none;
   }
   .symbolPersistence {
@@ -20,13 +23,13 @@ export const StyledContactImage = styled.div`
     left: 50%;
     top: 15%;
     opacity: 0;
-    animation: on-load 3s infinite ease-in-out 0.8s;
+    animation: on-load 3s infinite ease-in-out;
   }
   .symbolVencer {
     top: 40%;
     left: 2%;
     opacity: 0;
-    animation: on-load 6s infinite ease-in-out 1.5s;
+    animation: on-load 6s infinite ease-in-out;
   }
 
   @keyframes on-load {
@@ -119,10 +122,18 @@ export const StyledContactImage = styled.div`
     .titleContact__desktop {
       display: block;
       color: white;
-      padding: 2.5rem 2rem;
+      padding: 2.5rem 2rem 0.5rem;
       font-weight: var(--fw-bold);
       font-size: 2.5rem;
     }
+    .textoRequired--blue {
+      display: block;
+      color: #5a57fc;
+      font-size: 1.1rem;
+      font-weight: var(--fw-bold);
+      padding: 0 2rem;
+    }
+
     .symbolPersistence {
       top: 20%;
     }

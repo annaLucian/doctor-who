@@ -10,6 +10,9 @@ export default function ContactImage() {
   return (
     <StyledContactImage>
       <h1 className="titleContact__desktop">Envia tu mensaje al Doctor</h1>
+      <p className="textoRequired--blue">
+        Todos los campos con (*) son obligatorios
+      </p>
       <Image
         src="/assets/img/svg/persistencia.svg"
         width={200}

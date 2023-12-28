@@ -10,6 +10,14 @@ export const StyledFormContainer = styled.div`
   .btnForm {
     padding: 0.5rem 1.7rem;
     z-index: 10;
+    top: 12rem;
+  }
+  .is-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .is-disabled:hover {
+    background-color: transparent;
   }
   @media (min-width: 1000px) {
     padding: 2rem 6rem;
@@ -24,11 +32,21 @@ export const StyledFormContainer = styled.div`
       font-size: 1.2rem;
     }
   }
+  @media (min-width: 1400px) {
+    .btnForm {
+      top: 10rem;
+    }
+  }
+  @media (min-width: 1600px) {
+    .btnForm {
+      top: 20rem;
+    }
+  }
 `;
 
 export const StyledForm = styled.form`
   width: 100%;
-  height: 80%;
+  height: 70%;
 
   .form__label {
     float: left;
