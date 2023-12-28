@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const StyledCard = styled.div`
   color: var(--color-tertiary);
-  max-width: 300px;
-  margin: 0 auto;
+  max-width: 350px;
+  margin: 0 auto 2.5rem;
+
   .card__background {
     position: relative;
     width: 100%;
@@ -22,6 +23,7 @@ export const StyledCard = styled.div`
     height: ${(props) => (props.$ishover ? 'calc(100% - 0.6rem)' : '100%')};
     z-index: 2;
     overflow: hidden;
+    transition: ease all 0.8s;
     outline: ${(props) => (props.$ishover ? '1px solid white' : 'none')};
   }
   .card__background > div:first-child {
@@ -62,9 +64,9 @@ export const StyledCard = styled.div`
   .bg__image {
     background-image: url(/assets/img/doctors/First_Doctor_Peter_Cushing.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: cover;
-    height: 60vh;
+    height: 100%;
   }
 
   & > h5 {
@@ -90,5 +92,53 @@ export const StyledCard = styled.div`
     width: 65%;
     padding: 0.5rem 1.7rem;
     margin: 2rem 0;
+  }
+  @media (min-width: 600px) {
+    max-width: 400px;
+    margin: 0;
+    margin-bottom: 1rem;
+    flex-basis: calc(50% - 2rem);
+    .card__background {
+      height: 25rem;
+    }
+    & > h5 {
+      font-size: 1.5rem;
+    }
+    & > p {
+      font-size: 1.2rem;
+    }
+    & > time {
+      font-size: 1.2rem;
+    }
+    & > button {
+      width: 90%;
+      padding: 0.4rem 1.7rem;
+    }
+  }
+  @media (min-width: 800px) {
+    .card__background {
+      height: 30rem;
+    }
+  }
+  @media (min-width: 900px) {
+    flex-basis: calc(34% - 2rem);
+    .card__background {
+      height: 28rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    & > button {
+      width: 82%;
+    }
+  }
+  @media (min-width: 1400px) {
+    flex-basis: calc(25% - 1.5rem);
+  }
+  @media (min-width: 1600px) {
+    max-width: 450px;
+    flex-basis: calc(19% - 1rem);
+    & > button {
+      width: 75%;
+    }
   }
 `;

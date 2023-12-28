@@ -65,7 +65,7 @@ export const StyledCarouselItem = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 40rem;
+  height: calc(100vh - 12rem);
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
@@ -78,8 +78,7 @@ export const StyledCarouselItem = styled.div`
     font-family: var(--ff-lato);
   }
   @media (min-width: 1000px) {
-    height: 55rem;
-    background-position: top;
+    background-position: 0% 30%;
     padding: 0 8rem;
     .carouselItem__title {
       font-size: 4rem;

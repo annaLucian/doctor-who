@@ -15,6 +15,10 @@ export default function Doctors() {
         <Card />
         <Card />
         <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </di>
     </section>
   );

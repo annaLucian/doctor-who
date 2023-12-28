@@ -20,10 +20,9 @@ export default function Card() {
           <div className="bg__image"></div>
         </div>
       </div>
-
+      <h5>Primer Doctor</h5>
       <p>Peter Cushing</p>
       <time>1965-1966</time>
-      <h5>Primer Doctor</h5>
       <StyledButton
         onMouseLeave={handleOnMouseLeave}
         onMouseOver={handleMouseOver}
