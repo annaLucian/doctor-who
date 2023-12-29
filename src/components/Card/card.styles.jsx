@@ -97,7 +97,7 @@ export const StyledCard = styled.div`
     max-width: 400px;
     margin: 0;
     margin-bottom: 1rem;
-    flex-basis: calc(50% - 2rem);
+    flex-basis: calc(52% - 2rem);
     .card__background {
       height: 25rem;
     }
@@ -116,12 +116,13 @@ export const StyledCard = styled.div`
     }
   }
   @media (min-width: 800px) {
+    flex-basis: calc(51% - 2rem);
     .card__background {
       height: 30rem;
     }
   }
   @media (min-width: 900px) {
-    flex-basis: calc(34% - 2rem);
+    flex-basis: calc(32% - 1rem);
     .card__background {
       height: 28rem;
     }
@@ -135,8 +136,8 @@ export const StyledCard = styled.div`
     flex-basis: calc(25% - 1.5rem);
   }
   @media (min-width: 1600px) {
-    max-width: 450px;
-    flex-basis: calc(19% - 1rem);
+    max-width: 500px;
+    flex-basis: calc(20.3% - 2rem);
     & > button {
       width: 75%;
     }

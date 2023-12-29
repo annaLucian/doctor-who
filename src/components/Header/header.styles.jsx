@@ -54,11 +54,11 @@ export const StyledNavBar = styled.nav`
   align-items: center;
   position: absolute;
   top: 8rem;
-  z-index: ${({ open }) => (open ? '9' : '-1')};
+  z-index: ${({ $open }) => ($open ? '9' : '-1')};
   background: var(--color-primary);
   padding: 2rem;
   width: 100%;
-  opacity: ${({ open }) => (open ? '1' : '0')};
+  opacity: ${({ $open }) => ($open ? '1' : '0')};
   transition: opacity 0.2s ease-in-out;
   & .header__logoIcon--desktop {
     display: none;

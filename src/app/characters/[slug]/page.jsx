@@ -24,7 +24,11 @@ export default async function Page({ params }) {
       <div className="character__content">
         <h1>Conoce a {doctorFinded[0].doctor}</h1>
         <p>{doctorFinded[0].description}</p>
-        <StyledButton>Ver más</StyledButton>
+        <StyledButton>
+          <a href="https://www.doctorwho.tv/" target="_blank">
+            Ver más
+          </a>
+        </StyledButton>
       </div>
     </StyledCharacter>
   );

@@ -9,19 +9,97 @@
     margin-bottom: 2rem;
 }
 
+.bg__notFound {
+    background-image: url(/assets/img/icon-page/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: calc(90vh - 102px);
+    position: relative;
+}
+
+.bg__notFound p {
+    color: white;
+    font-size: 1.5rem;
+    padding: 8rem 2rem;
+}
+
+.bg__notFound span {
+    color: burlywood;
+    font-size: 1.8rem;
+}
+
+.img__notFound {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    animation: float 3s infinite linear;
+}
+
+@keyframes float {
+    from {
+        transform: rotate(0deg) translate3d(5px, 0, 0) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate3d(5px, 0, 0) rotate(-360deg);
+    }
+}
+
 @media(min-width:500px) {
     .cards__container {
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
         display: flex;
-        justify-content: center;
+    }
+}
+
+@media(min-width:800px) {
+    .bg__notFound p {
+        text-align: center;
+
+    }
+
+    .img__notFound {
+        left: 33%;
     }
 }
 
 @media(min-width:1200px) {
     .doctors__section {
         padding: 4rem 6rem;
+    }
+
+    .bg__notFound p {
+        font-size: 2rem;
+
+    }
+
+    .bg__notFound span {
+        font-size: 2.4rem;
+    }
+
+    .img__notFound {
+        left: 40%;
+    }
+}
+
+@media(min-width:1400px) {
+    .bg__notFound p {
+        padding-top: 10rem;
+        font-size: 2.4rem;
+
+    }
+
+    .bg__notFound span {
+        font-size: 2.6rem;
+    }
+
+    .img__notFound img {
+        width: 18rem;
+        height: 23rem;
     }
 }
 
