@@ -193,31 +193,32 @@ export const StyledCharacter = styled.section`
   }
   @media (min-width: 1600px) {
     padding: 6rem 12rem;
-  }
-  & p {
-    font-size: 1.3rem;
-  }
-  .character__content,
-  .character__img {
-    flex-basis: 50%;
-  }
-  .character__img {
-    justify-content: end;
-  }
-  .character__content h1 {
-    font-size: 3rem;
-  }
-  &:after {
-    width: 30rem;
-    height: 30rem;
-    top: 25%;
-    right: 25%;
-  }
-  &::before {
-    width: 26rem;
-    height: 26rem;
-    right: -10%;
-    top: 50%;
-    opacity: 1;
+
+    & p {
+      font-size: 1.3rem;
+    }
+    .character__content,
+    .character__img {
+      flex-basis: 50%;
+    }
+    .character__img {
+      justify-content: end;
+    }
+    .character__content h1 {
+      font-size: 3rem;
+    }
+    &:after {
+      width: 30rem;
+      height: 30rem;
+      top: 25%;
+      right: 25%;
+    }
+    &::before {
+      width: 26rem;
+      height: 26rem;
+      right: -10%;
+      top: 50%;
+      opacity: 1;
+    }
   }
 `;
