@@ -37,6 +37,7 @@ export default function Header() {
         <ul className="header__links">
           <li>
             <Link
+              // onClick={() => setOpen(!open)}
               href="/characters"
               className={`${pathname === '/characters' ? 'active' : ''}`}
             >
@@ -45,6 +46,7 @@ export default function Header() {
           </li>
           <li>
             <Link
+              // onClick={() => setOpen(!open)}
               href="/doctors"
               className={`${pathname === '/doctors' ? 'active' : ''}`}
             >
@@ -53,6 +55,7 @@ export default function Header() {
           </li>
           <li>
             <Link
+              // onClick={() => setOpen(!open)}
               href="/contact"
               className={`${pathname === '/contact' ? 'active' : ''}`}
             >
