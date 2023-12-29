@@ -1,15 +1,18 @@
 'use client';
 import { StyledCard } from '@/components/Card/card.styles';
-import Image from 'next/image';
 import { StyledButton } from '@/components/Carousel/carousel.styles';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Card({ doctor }) {
+  const router = useRouter();
   const [isHover, setIsHover] = useState(false);
+  const handleClick = (id) => {
+    router.push(`/characters/${id}`);
+  };
   const handleMouseOver = () => {
     setIsHover(true);
   };
-
   const handleOnMouseLeave = () => {
     setIsHover(false);
   };
@@ -25,6 +28,7 @@ export default function Card({ doctor }) {
       <p>{doctor.actor}</p>
       <time>{doctor.screen_time}</time>
       <StyledButton
+        onClick={() => handleClick(doctor.id)}
         onMouseLeave={handleOnMouseLeave}
         onMouseOver={handleMouseOver}
       >

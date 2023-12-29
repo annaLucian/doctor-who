@@ -142,23 +142,24 @@ export const StyledBurger = styled.button`
   div {
     width: 2.7rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? '#EFFFFA' : '#EFFFFA')};
+    background: ${({ $open }) => ($open ? '#EFFFFA' : '#EFFFFA')};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 6px;
 
     &:first-child {
-      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ $open }) => ($open ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     &:nth-child(2) {
-      opacity: ${({ open }) => (open ? '0' : '1')};
-      transform: ${({ open }) => (open ? 'translateX(20px)' : 'translateX(0)')};
+      opacity: ${({ $open }) => ($open ? '0' : '1')};
+      transform: ${({ $open }) =>
+        $open ? 'translateX(20px)' : 'translateX(0)'};
     }
 
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ $open }) => ($open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
   @media (min-width: 1000px) {

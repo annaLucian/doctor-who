@@ -27,17 +27,17 @@ export default function Header() {
           </picture>
         </Link>
 
-        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <StyledBurger $open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />
           <div />
         </StyledBurger>
       </div>
-      <StyledNavBar open={open}>
+      <StyledNavBar $open={open}>
         <ul className="header__links">
           <li>
             <Link
-              // onClick={() => setOpen(!open)}
+              onClick={() => setOpen(!open)}
               href="/characters"
               className={`${pathname === '/characters' ? 'active' : ''}`}
             >
@@ -46,7 +46,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              // onClick={() => setOpen(!open)}
+              onClick={() => setOpen(!open)}
               href="/doctors"
               className={`${pathname === '/doctors' ? 'active' : ''}`}
             >
@@ -55,7 +55,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              // onClick={() => setOpen(!open)}
+              onClick={() => setOpen(!open)}
               href="/contact"
               className={`${pathname === '/contact' ? 'active' : ''}`}
             >
@@ -74,7 +74,7 @@ export default function Header() {
               />
             </picture>
           </Link>
-          <StyledBurger open={open} onClick={() => setOpen(!open)}>
+          <StyledBurger $open={open} onClick={() => setOpen(!open)}>
             <div />
             <div />
             <div />
