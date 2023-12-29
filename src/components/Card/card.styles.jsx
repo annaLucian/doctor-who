@@ -62,7 +62,7 @@ export const StyledCard = styled.div`
     }
   }
   .bg__image {
-    background-image: url(/assets/img/doctors/First_Doctor_Peter_Cushing.jpg);
+    background-image: ${(props) => `url(${props.$urlImg})`};
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
