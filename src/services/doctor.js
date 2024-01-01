@@ -5,3 +5,18 @@ export const getData = async () => {
   const data = await res.json();
   return data;
 };
+
+export const filterData = (data, searchParam) => {
+  let filteredDoctors;
+  if (searchParam) {
+    filteredDoctors = [...data].filter((el) => {
+      const conditional =
+        el.doctor.toLowerCase().includes(searchParam.toLowerCase()) ||
+        el.actor.toLowerCase().includes(searchParam.toLowerCase());
+      return conditional;
+    });
+  } else {
+    filteredDoctors = [...data];
+  }
+  return filteredDoctors;
+};

@@ -29,7 +29,11 @@ export default function Characters() {
           bondad siempre que puede. En sus propias palabras: Cuando la gente
           necesita ayuda, nunca me niego.
         </p>
-        <StyledButton>Ver más</StyledButton>
+        <StyledButton>
+          <a href="https://www.doctorwho.tv/" target="_blank">
+            Ver más
+          </a>
+        </StyledButton>
       </div>
     </StyledCharacter>
   );

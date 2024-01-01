@@ -76,6 +76,7 @@ export const StyledCarouselItem = styled.div`
     font-weight: var(--fw-bold);
     color: var(--color-tertiary);
     font-family: var(--ff-lato);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   }
   @media (min-width: 1000px) {
     background-position: 0% 30%;

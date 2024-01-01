@@ -1,3 +1,4 @@
+'use client';
 import styled from 'styled-components';
 
 export const StyledCharacter = styled.section`
@@ -73,6 +74,10 @@ export const StyledCharacter = styled.section`
     padding: 0.5rem 1.7rem;
     left: 2rem;
     margin-bottom: 4rem;
+    & a {
+      text-decoration: none;
+      color: #000;
+    }
   }
   .character__content h1 {
     display: none;

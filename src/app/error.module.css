@@ -1,0 +1,136 @@
+.errorContainer {
+    background-image: url('/assets/img/icon-page/Error-pages.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(90vh - 102px);
+    color: white;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.errorContent h2 {
+    color: #ffc67e;
+    text-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.errorContent h6 {
+    color: #ffc67e;
+    text-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.errorContent p {
+    font-size: 1rem;
+    font-family: var(--font-montserrat);
+    font-weight: var(--fw-regular);
+}
+
+.errorContent a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #ffc67e;
+    cursor: pointer;
+}
+
+.errorContent .link {
+    animation: typing 4s steps(12) infinite;
+    margin-left: 0.4rem;
+    border-bottom: 1px solid #ffc67e;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    55%,
+    65%,
+    75% {
+        opacity: 1;
+    }
+
+    60%,
+    70% {
+        opacity: 0;
+    }
+
+    80% {
+        width: 11%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@media(min-width:700px) {
+    .errorContent {
+        width: 70%;
+    }
+
+    .errorContent p {
+        display: inline-block;
+    }
+
+    .errorContent .link {
+        display: inline-block;
+    }
+}
+
+@media(min-width:1200px) {
+    .errorContainer {
+        padding: 5rem 6rem;
+    }
+
+    .errorContent {
+        width: 60%;
+    }
+
+    .errorContent p {
+        font-size: 1.3rem;
+
+    }
+
+    .errorContent a {
+        font-size: 1.5rem;
+    }
+}
+
+@media(min-width:1400px) {
+    .errorContainer {
+        padding: 8rem 6rem;
+    }
+
+    .errorContent {
+        width: 40%;
+    }
+
+    .errorContent p {
+        font-size: 1.4rem;
+
+    }
+
+    .errorContent h6 {
+        font-size: 2rem;
+    }
+
+    .errorContent a {
+        font-size: 1.6rem;
+    }
+}
+
+@media(min-width:1600px) {
+    .errorContainer {
+        padding: 10rem 8rem;
+    }
+
+    .errorContent {
+        width: 40%;
+    }
+}

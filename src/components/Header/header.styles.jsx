@@ -54,11 +54,11 @@ export const StyledNavBar = styled.nav`
   align-items: center;
   position: absolute;
   top: 8rem;
-  z-index: ${({ open }) => (open ? '9' : '-1')};
+  z-index: ${({ $open }) => ($open ? '9' : '-1')};
   background: var(--color-primary);
   padding: 2rem;
   width: 100%;
-  opacity: ${({ open }) => (open ? '1' : '0')};
+  opacity: ${({ $open }) => ($open ? '1' : '0')};
   transition: opacity 0.2s ease-in-out;
   & .header__logoIcon--desktop {
     display: none;
@@ -142,23 +142,24 @@ export const StyledBurger = styled.button`
   div {
     width: 2.7rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? '#EFFFFA' : '#EFFFFA')};
+    background: ${({ $open }) => ($open ? '#EFFFFA' : '#EFFFFA')};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 6px;
 
     &:first-child {
-      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ $open }) => ($open ? 'rotate(45deg)' : 'rotate(0)')};
     }
 
     &:nth-child(2) {
-      opacity: ${({ open }) => (open ? '0' : '1')};
-      transform: ${({ open }) => (open ? 'translateX(20px)' : 'translateX(0)')};
+      opacity: ${({ $open }) => ($open ? '0' : '1')};
+      transform: ${({ $open }) =>
+        $open ? 'translateX(20px)' : 'translateX(0)'};
     }
 
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ $open }) => ($open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
   @media (min-width: 1000px) {
