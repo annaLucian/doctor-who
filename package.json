@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch --colors"
   },
   "dependencies": {
     "@testing-library/user-event": "^14.5.2",

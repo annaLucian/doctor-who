@@ -9,13 +9,23 @@ import {
 import Slider from 'react-slick';
 
 const CAROUSEL_PROPS = [
-  { title: 'The Giggle', imgUrl: '/assets/img/carrusel/carrusel-2.jpg' },
-  { title: 'Allons-y!', imgUrl: '/assets/img/carrusel/carrusel-1.jpg' },
   {
+    id: '1',
+    title: 'The Giggle',
+    imgUrl: '/assets/img/carrusel/carrusel-2.jpg',
+  },
+  {
+    id: '2',
+    title: 'Allons-y!',
+    imgUrl: '/assets/img/carrusel/carrusel-1.jpg',
+  },
+  {
+    id: '3',
     title: 'Wild Blue Yonder',
     imgUrl: '/assets/img/carrusel/carrusel-4.jpg',
   },
   {
+    id: '4',
     title: 'Meet the new Doctor...',
     imgUrl: '/assets/img/carrusel/carrusel-3.jpg',
   },
@@ -34,7 +44,7 @@ export default function Carousel() {
     adaptiveHeight: true,
   };
   return (
-    <SliderContainer className="slider-container">
+    <SliderContainer className="slider-container" role="carousel">
       <Slider {...settings}>
         {CAROUSEL_PROPS.map((props) => {
           return (
@@ -46,6 +56,7 @@ export default function Carousel() {
                     href="https://www.doctorwho.tv/"
                     target="_blank"
                     className="btnLink"
+                    data-testid={`btn-carousel-${props.id}`}
                   >
                     Ver ahora
                   </a>
