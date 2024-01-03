@@ -9,9 +9,9 @@ export default function NotFound() {
         <h6>Oh, madre mía. creo que seria mejor regresar a la TARDIS!!</h6>
         <p>
           Puedes seguir explorando más contenido en nuestra página
-          <div className={styles.link}>
+          <span className={styles.link}>
             <Link href="/">Home</Link>
-          </div>
+          </span>
         </p>
       </div>
     </section>

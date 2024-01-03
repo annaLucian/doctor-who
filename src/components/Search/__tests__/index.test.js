@@ -13,13 +13,13 @@ jest.mock('next/navigation', () => ({
 }));
 describe('<Search/>', () => {
   test('should be available in the search component', () => {
-    render(<Search />);
+    render(<Search setOpen={() => {}} />);
     const inputSearch = screen.getByTestId('search-form');
     expect(inputSearch).toBeInTheDocument();
   });
   test.only('should correctly submit the form with the correct search query', async () => {
     const user = userEvent.setup();
-    render(<Search />);
+    render(<Search setOpen={() => {}} />);
     const inputSearch = screen.getByPlaceholderText('Buscar');
     await user.type(inputSearch, 'william');
 

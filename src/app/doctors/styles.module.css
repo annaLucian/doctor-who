@@ -22,7 +22,8 @@
 .bg__notFound p {
     color: white;
     font-size: 1.5rem;
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
 .bg__notFound span {
@@ -53,6 +54,10 @@
         flex-wrap: wrap;
         gap: 2rem;
         display: flex;
+    }
+
+    .img__notFound {
+        left: 28%;
     }
 }
 
@@ -88,7 +93,7 @@
 
 @media(min-width:1400px) {
     .bg__notFound p {
-        padding-top: 10rem;
+        padding-top: 6rem;
         font-size: 2.4rem;
 
     }
@@ -98,8 +103,8 @@
     }
 
     .img__notFound img {
-        width: 18rem;
-        height: 23rem;
+        width: 13rem;
+        height: 17rem;
     }
 }
 
