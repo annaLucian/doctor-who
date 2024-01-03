@@ -35,8 +35,6 @@ export default function Form() {
     const localStorageData =
       JSON.parse(localStorage.getItem('contactForm')) || [];
     localStorageData.push(values);
-
-    console.log({ localStorageData });
     localStorage.setItem('contactForm', JSON.stringify(localStorageData));
     notify();
     setIsFocus(false);

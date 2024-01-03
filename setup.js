@@ -20,12 +20,14 @@ window.matchMedia = jest.fn().mockImplementation(() => ({
 
 window.scroll = jest.fn();
 
+JSON.parse = jest.fn();
 const mockGetItem = jest.fn();
 const mockSetItem = jest.fn();
 const mockRemoveItem = jest.fn();
-
-window.localStorage = jest.fn().mockImplementation(() => ({
-  getItem: (...args) => mockGetItem(...args),
-  setItem: (...args) => mockSetItem(...args),
-  removeItem: (...args) => mockRemoveItem(...args),
-}));
+Object.defineProperty(window, 'localStorage', {
+  value: {
+    getItem: mockGetItem,
+    setItem: mockSetItem,
+  },
+  writable: true,
+});

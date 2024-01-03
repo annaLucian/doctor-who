@@ -2,7 +2,7 @@ import { StyledLinks } from './socialLinks.styles';
 
 export default function SocialLinks() {
   return (
-    <StyledLinks className="socialLinks" role="list">
+    <StyledLinks className="socialLinks" data-testid="list-social">
       <li>
         <a href="https://www.facebook.com/DoctorWho" target="_blank">
           <svg

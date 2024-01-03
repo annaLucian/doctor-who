@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { StyledContactImage } from '@/components/ContactImage/conctactImage.styles';
 
