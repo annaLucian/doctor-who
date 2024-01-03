@@ -34,7 +34,7 @@ export default function Header() {
           <div />
         </StyledBurger>
       </div>
-      <StyledNavBar $open={open}>
+      <StyledNavBar $open={open} data-testid="nav-bar">
         <ul className="header__links">
           <li>
             <Link
@@ -75,7 +75,11 @@ export default function Header() {
               />
             </picture>
           </Link>
-          <StyledBurger $open={open} onClick={() => setOpen(!open)}>
+          <StyledBurger
+            data-testid="burger-icon"
+            $open={open}
+            onClick={() => setOpen(!open)}
+          >
             <div />
             <div />
             <div />
