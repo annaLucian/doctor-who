@@ -27,8 +27,11 @@ export default function Header() {
             />
           </picture>
         </Link>
-
-        <StyledBurger $open={open} onClick={() => setOpen(!open)}>
+        <StyledBurger
+          data-testid="burger-icon"
+          $open={open}
+          onClick={() => setOpen(!open)}
+        >
           <div />
           <div />
           <div />
@@ -75,11 +78,7 @@ export default function Header() {
               />
             </picture>
           </Link>
-          <StyledBurger
-            data-testid="burger-icon"
-            $open={open}
-            onClick={() => setOpen(!open)}
-          >
+          <StyledBurger $open={open} onClick={() => setOpen(!open)}>
             <div />
             <div />
             <div />
