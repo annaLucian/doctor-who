@@ -4,13 +4,14 @@ import userEvent from '@testing-library/user-event';
 import { prettyDOM } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from '@/components/Header/index.jsx';
-
+import { usePathname } from 'next/navigation';
 jest.mock('next/navigation', () => {
   const originalModule = jest.requireActual('next/navigation');
   return {
     __esModule: true,
     ...originalModule,
     useRouter: jest.fn(),
+    usePathname: jest.fn(),
   };
 });
 
@@ -48,21 +49,12 @@ describe('<Header />', () => {
     expect(getComputedStyle(nav).opacity).toBe('1');
   });
 
-  // test('should activate a link when clicked', async () => {
-  //   window.location.pathname = '/doctors';
-  //   window.location.assign('http://localhost:3001/doctors');
-  //   render(<Header />);
-  //   const user = userEvent.setup();
-  //   const doctorLink = screen.getByText(/doctores/i);
-  //   console.log(prettyDOM(doctorLink));
-
-  //   console.log(window.location.pathname);
-  //   const characterLink = screen.getByRole('link', { name: /conoce/i });
-  //   await user.click(doctorLink);
-  //   console.log(prettyDOM(doctorLink));
-  //   expect(doctorLink).toHaveClass('active');
-  //   expect(getComputedStyle(doctorLink).borderBottom).toBe('1px solid #ffc67e');
-  // });
+  test('should activate a link when clicked', async () => {
+    usePathname.mockReturnValue('/doctors');
+    render(<Header />);
+    const doctorLink = screen.getByText(/doctores/i);
+    expect(doctorLink).toHaveClass('active');
+  });
 
   test('should be able to see the search and social links', () => {
     render(<Header />);
