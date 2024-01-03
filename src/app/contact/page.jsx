@@ -1,8 +1,11 @@
-'use client';
 import ContactImage from '@/components/ContactImage';
 import Form from '@/components/Form';
 import styles from '@/app/contact/styles.module.css';
-import { metadata } from '@/components/ContactImage';
+
+export const metadata = {
+  title: 'Contacto | Doctor who',
+  description: 'This page information.',
+};
 export default function Contact() {
   return (
     <section className={styles.contactPage}>

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { getData, filterData } from '@/services/doctor';
 
 export const metadata = {
-  title: 'Doctors | Doctor who',
+  title: 'Doctores | Doctor who',
   description: 'This page shows a list of doctors.',
 };
 

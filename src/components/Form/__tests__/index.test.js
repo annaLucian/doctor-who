@@ -31,15 +31,6 @@ describe('<Form/>', () => {
     expect(inputMessage).toHaveValue('esto es un mensaje, de prueba');
   });
   test('should submit the form and save the data in localStorage', async () => {
-    // const mockGetItem = jest.fn();
-    // const mockSetItem = jest.fn();
-    // const localStorageMock = {
-    //   getItem: mockGetItem,
-    //   setItem: mockSetItem,
-    //   clear: jest.fn(),
-    // };
-    // window.localStorage = localStorageMock;
-
     const user = userEvent.setup();
     render(<Form />);
     const inputName = screen.getByTestId('name-input');
@@ -52,13 +43,11 @@ describe('<Form/>', () => {
 
     const btnForm = screen.getByTestId('btn-Form');
     await user.click(btnForm);
-    console.log(window.localStorage);
-    // expect().toHaveBeenCalled();
 
-    // const storedData = JSON.parse(localStorageMock.setItem.mock.calls[0][1]);
-    // expect(storedData).toHaveLength(1);
-    // expect(storedData[0].name).toBe('Jimena Lara');
-    // expect(storedData[0].email).toBe('jimena@gmail.com');
-    // expect(storedData[0].message).toBe('esto es un mensaje, de prueba');
+    expect(window.localStorage.setItem).toHaveBeenCalledTimes(1);
+    expect(window.localStorage.setItem).toHaveBeenCalledWith(
+      'contactForm',
+      '[{"nombre":"Jimena Lara","email":"jimena@gmail.com","message":"esto es un mensaje, de prueba"}]',
+    );
   });
 });
