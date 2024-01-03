@@ -1,11 +1,11 @@
-'use client';
 import Image from 'next/image';
 import { StyledButton } from '@/components/Carousel/carousel.styles';
 import { StyledCharacter } from '@/app/characters/characters.styles';
-// export const metadata = {
-//   title: 'Characters',
-//   description: 'This page shows information about a character.',
-// };
+
+export const metadata = {
+  title: 'Conoce a | Doctor who',
+  description: 'This page shows information about a character.',
+};
 export default function Characters() {
   return (
     <StyledCharacter>

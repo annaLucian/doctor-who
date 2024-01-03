@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -26,14 +27,17 @@ export default function Header() {
             />
           </picture>
         </Link>
-
-        <StyledBurger $open={open} onClick={() => setOpen(!open)}>
+        <StyledBurger
+          data-testid="burger-icon"
+          $open={open}
+          onClick={() => setOpen(!open)}
+        >
           <div />
           <div />
           <div />
         </StyledBurger>
       </div>
-      <StyledNavBar $open={open}>
+      <StyledNavBar $open={open} data-testid="nav-bar">
         <ul className="header__links">
           <li>
             <Link

@@ -17,9 +17,17 @@ export default function Card({ doctor }) {
     setIsHover(false);
   };
   return (
-    <StyledCard $ishover={isHover} $urlImg={doctor.image}>
+    <StyledCard
+      $ishover={isHover}
+      $urlImg={doctor.image}
+      data-testid="card-component"
+      data-is-hover={isHover}
+    >
       <div className="card__background">
-        <div className={`${isHover ? 'animate-bg' : ''}`}></div>
+        <div
+          className={`${isHover ? 'animate-bg' : ''}`}
+          data-testid="background-element"
+        ></div>
         <div className="card__content">
           <div className="bg__image"></div>
         </div>
@@ -28,6 +36,7 @@ export default function Card({ doctor }) {
       <p>{doctor.actor}</p>
       <time>{doctor.screen_time}</time>
       <StyledButton
+        data-testid="button-card"
         onClick={() => handleClick(doctor.id)}
         onMouseLeave={handleOnMouseLeave}
         onMouseOver={handleMouseOver}

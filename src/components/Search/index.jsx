@@ -1,16 +1,21 @@
 'use client';
+import { useState } from 'react';
 import { FormSearch } from './search.styles';
 import { useRouter } from 'next/navigation';
 export default function Search() {
   const router = useRouter();
+  const [searchValue, setSearchValue] = useState('');
   const handleSubmit = (event) => {
     event.preventDefault();
-    let inputValue = event.target.search.value;
-    router.push(`/doctors?search=${inputValue}`);
-    inputValue = '';
+    router.push(`/doctors?search=${searchValue}`);
+    setSearchValue('');
   };
+
   return (
-    <FormSearch onSubmit={(event) => handleSubmit(event)}>
+    <FormSearch
+      data-testid="search-form"
+      onSubmit={(event) => handleSubmit(event)}
+    >
       <svg
         className="SearchIcon"
         width="24"
@@ -29,6 +34,8 @@ export default function Search() {
         id="searchBar"
         placeholder="Buscar"
         name="search"
+        value={searchValue}
+        onChange={(e) => setSearchValue(e.target.value)}
       ></input>
     </FormSearch>
   );
