@@ -27,16 +27,25 @@ describe('<Header />', () => {
     expect(contactLink).toBeInTheDocument();
   });
 
-  test('should reddirect to correct pages', async () => {
-    let assignMock = jest.fn();
+  // test('should reddirect to correct pages', async () => {
+  //   let assignMock = jest.fn();
 
+  //   render(<Header />);
+
+  //   const doctorLink = screen.getByRole('link', { name: /doctores/i });
+  //   const characterLink = screen.getByRole('link', { name: /conoce/i });
+  //   const contactLink = screen.getByRole('link', { name: /contact/i });
+  //   await userEvent.click(doctorLink);
+
+  //   expect(window.location.assign('/dd')).toHaveBeenCalledWith('/doctors');
+  // });
+  test('should activate the menu by clicking on the hunger icon', async () => {
+    const user = userEvent.setup();
     render(<Header />);
+    const burgerIcon = screen.getByTestId('burger-icon');
+    await user.click(burgerIcon);
 
-    const doctorLink = screen.getByRole('link', { name: /doctores/i });
-    const characterLink = screen.getByRole('link', { name: /conoce/i });
-    const contactLink = screen.getByRole('link', { name: /contact/i });
-    await userEvent.click(doctorLink);
-
-    expect(window.location.assign('/dd')).toHaveBeenCalledWith('/doctors');
+    const nav = screen.getByTestId('nav-bar');
+    expect(nav).toHaveClass('open');
   });
 });

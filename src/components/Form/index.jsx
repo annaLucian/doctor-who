@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { StyledForm, StyledFormContainer } from './form.styles';
 import { StyledButton } from '@/components/Carousel/carousel.styles';
@@ -7,6 +8,9 @@ const initialInputValues = {
   nombre: '',
   email: '',
   message: '',
+};
+export const scrollWindow = (x, y) => {
+  window.scroll(x, y);
 };
 export default function Form() {
   /*cambia el estado del input*/
@@ -31,11 +35,13 @@ export default function Form() {
     const localStorageData =
       JSON.parse(localStorage.getItem('contactForm')) || [];
     localStorageData.push(values);
+
+    console.log({ localStorageData });
     localStorage.setItem('contactForm', JSON.stringify(localStorageData));
     notify();
     setIsFocus(false);
     setValues(initialInputValues);
-    window.scroll(300, 300);
+    scrollWindow(300, 300);
   };
 
   // Object.values => coge los values de un  objecto y retorna un array: {a:"value a", b:"value b"} => ["value a", "value b"]
@@ -49,6 +55,7 @@ export default function Form() {
             type="text"
             name="nombre"
             id="name"
+            data-testid="name-input"
             value={values.nombre}
             onChange={(event) =>
               setValues({ ...values, nombre: event.target.value })
@@ -67,6 +74,7 @@ export default function Form() {
             type="email"
             name="email"
             id="email"
+            data-testid="email-input"
             value={values.email}
             onChange={(event) =>
               setValues({ ...values, email: event.target.value })
@@ -84,6 +92,7 @@ export default function Form() {
           <textarea
             name="message"
             id="message"
+            data-testid="message-input"
             cols="30"
             rows="50"
             onBlur={handleBlur}
@@ -100,6 +109,7 @@ export default function Form() {
           </span>
         </label>
         <StyledButton
+          data-testid="btn-Form"
           className={`btnForm ${isDisabled ? 'is-disabled' : ''}`}
           disabled={isDisabled}
         >
