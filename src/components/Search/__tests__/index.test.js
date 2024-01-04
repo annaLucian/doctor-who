@@ -17,7 +17,7 @@ describe('<Search/>', () => {
     const inputSearch = screen.getByTestId('search-form');
     expect(inputSearch).toBeInTheDocument();
   });
-  test.only('should correctly submit the form with the correct search query', async () => {
+  test('should correctly submit the form with the correct search query', async () => {
     const user = userEvent.setup();
     render(<Search setOpen={() => {}} />);
     const inputSearch = screen.getByPlaceholderText('Buscar');
