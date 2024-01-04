@@ -2,12 +2,13 @@
 import { useState } from 'react';
 import { FormSearch } from './search.styles';
 import { useRouter } from 'next/navigation';
-export default function Search() {
+export default function Search({ setOpen }) {
   const router = useRouter();
   const [searchValue, setSearchValue] = useState('');
   const handleSubmit = (event) => {
     event.preventDefault();
     router.push(`/doctors?search=${searchValue}`);
+    setOpen(false);
     setSearchValue('');
   };
 
@@ -31,6 +32,7 @@ export default function Search() {
       </svg>
       <input
         type="text"
+        autocomplete="off"
         id="searchBar"
         placeholder="Buscar"
         name="search"

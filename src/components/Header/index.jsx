@@ -24,6 +24,7 @@ export default function Header() {
               width={100}
               height={100}
               alt="logo of the serie"
+              priority={true}
             />
           </picture>
         </Link>
@@ -75,6 +76,7 @@ export default function Header() {
                 width={100}
                 height={100}
                 alt="logo of the serie"
+                priority={true}
               />
             </picture>
           </Link>
@@ -85,7 +87,7 @@ export default function Header() {
           </StyledBurger>
         </div>
         <div className="header__SearchLinks">
-          <Search />
+          <Search setOpen={setOpen} />
           <SocialLinks />
         </div>
       </StyledNavBar>
