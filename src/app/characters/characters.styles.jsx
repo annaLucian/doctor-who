@@ -77,6 +77,7 @@ export const StyledCharacter = styled.section`
     & a {
       text-decoration: none;
       color: #000;
+      padding: 0 2rem;
     }
   }
   .character__content h1 {
@@ -170,6 +171,9 @@ export const StyledCharacter = styled.section`
       padding: 0.6rem 1.7rem;
       font-size: 1.2rem;
       width: 50%;
+      & a {
+        padding: 0.5rem 5rem;
+      }
     }
   }
   @media (min-width: 1400px) {
@@ -187,6 +191,9 @@ export const StyledCharacter = styled.section`
     }
     .character__content h1 {
       padding: 0;
+    }
+    .character__content p {
+      width: 90%;
     }
     & p {
       padding-right: 0;
@@ -211,6 +218,9 @@ export const StyledCharacter = styled.section`
     }
     .character__content h1 {
       font-size: 3rem;
+    }
+    .character__content p {
+      width: 100%;
     }
     &:after {
       width: 30rem;

@@ -134,6 +134,9 @@ export const StyledCard = styled.div`
   }
   @media (min-width: 1400px) {
     flex-basis: calc(25% - 1.5rem);
+    & > button {
+      font-size: 1.3rem;
+    }
   }
   @media (min-width: 1600px) {
     max-width: 500px;
