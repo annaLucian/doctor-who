@@ -32,7 +32,7 @@ export default function Search({ setOpen }) {
       </svg>
       <input
         type="text"
-        autocomplete="off"
+        autoComplete="off"
         id="searchBar"
         placeholder="Buscar"
         name="search"
