@@ -58,6 +58,7 @@ doctor-who-website/
 |       ├── characters/
 |       |   └── page
 |       ├── doctors/
+|       |   └── page
 |       └── ...
 |   └── components/
 |       ├── Header/
