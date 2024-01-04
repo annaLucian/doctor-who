@@ -13,7 +13,7 @@ export const FormSearch = styled.form`
     width: 100%;
     height: 2rem;
     font-size: 2rem;
-    background-color: unset;
+    background-color: unset !important;
     outline: none;
     text-align: center;
     font-weight: var(--fw-semibold);
