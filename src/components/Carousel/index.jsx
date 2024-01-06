@@ -8,7 +8,7 @@ import {
 } from './carousel.styles';
 import Slider from 'react-slick';
 
-export const CAROUSEL_PROPS = [
+const CAROUSEL_PROPS = [
   {
     id: '1',
     title: 'The Giggle',
