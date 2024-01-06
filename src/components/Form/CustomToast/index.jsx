@@ -13,7 +13,7 @@ export default function CustomToaster() {
       }}
       toastOptions={{
         className: '',
-        duration: 5000,
+        duration: Infinity,
         style: {},
       }}
     />

@@ -114,7 +114,7 @@ export default function Form() {
           Enviar
         </StyledButton>
       </StyledForm>
-      <CustomToaster />
+      <CustomToaster/>
     </StyledFormContainer>
   );
 }
